@@ -6,7 +6,7 @@ import facebookImage from "../../Images/facebook.png";
 import instagramImage from "../../Images/Instagram_logo_2016.svg.webp";
 
 const handleHireMeClick = () => {
-  window.open("mailto:zohaibsoomro0101@gmail.com", "_blank");
+  window.open("mailto:suhaibusman54@gmail.com", "_blank");
 };
 
 const handleWhatsApp = () => {
@@ -42,7 +42,7 @@ export const contactdata = [
   {
     id: 4,
     title: "LinkedIn",
-    title2: "Muhammad Suahib Usman",
+    title2: "Muhammad Suhaib Usman",
     img: linkedInImage,
     link: "https://www.linkedin.com/in/suhaibusman/",
     hover: true,
