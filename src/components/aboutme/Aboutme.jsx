@@ -24,7 +24,7 @@ const Aboutme = () => {
               of skills in <span className="pspan">HTML5</span> ,{" "}
               <span className="pspan">CSS3</span>,{" "}
               <span className="pspan">JavaScript</span>,{" "}
-              <span className="pspan">Flutter</span> along with <span className="pspan">NextJS</span> ,{" "}
+              <span className="pspan">Flutter</span> ,{" "}
               <span className="pspan">Dart</span>, and{" "}
               <span className="pspan">Firebase</span>. I excel in designing and
               maintaining <span className="pspan">responsive websites</span>{" "}
