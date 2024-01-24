@@ -1,0 +1,609 @@
+.contact {
+  padding: 8rem 13rem;
+  background-color: #ffffff;
+  transition: all ease 0.7s;
+  transition: all ease 0.7s;
+  //   border: 1px solid red;
+
+  .container {
+    // border: 1px solid red;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .bottom {
+      // border: 1px solid red;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+
+      .subbottom {
+        // border: 1px solid red;
+        width: 31%;
+        display: flex;
+        // gap: 1.1rem;
+        align-items: center;
+        background-color: #fafafa;
+        position: relative;
+        cursor: pointer;
+        border-radius: 0.4rem;
+        padding: 0.4rem 0.2rem;
+        transition: all ease 0.7s;
+
+        .a {
+          text-decoration: none;
+          // border: 1px solid red;
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          color: #171717;
+          transition: all ease 0.7s;
+
+          &:visited {
+            color: #171717;
+            transition: all ease 0.7s;
+          }
+        }
+
+        &:hover {
+          background-color: #f1f1f1;
+          transition: all ease 0.7s;
+          .hoverspan::before {
+            content: "A-1888, Phase-2, Gulshan-e-Hadeed";
+            position: absolute;
+            height: 2rem;
+            width: 20rem;
+            top: -2.3rem;
+            background-color: seagreen;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 0.2rem;
+            font-weight: 600;
+            color: white;
+            transition: all ease 0.7s;
+          }
+        }
+
+        .right {
+          // border: 1px solid red;
+          display: flex;
+          flex-direction: column;
+          // align-items: center;
+
+          span:first-child {
+            font-weight: 600;
+            font-size: 1.3rem;
+          }
+
+          span:last-child {
+            color: #5a5a5a;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all ease 0.7s;
+
+            &:hover {
+              &.spanlast {
+                background-color: #dcdcdc;
+                padding: 0.15rem;
+                border-radius: 0.1rem;
+                color: rgb(40, 40, 40);
+                font-weight: 600;
+                transition: all ease 0.7s;
+              }
+            }
+          }
+          .a {
+            text-decoration: none;
+          }
+        }
+
+        .left {
+          // border: 1px solid red;
+          height: 4.1rem;
+          width: 4.1rem;
+          border-radius: 4rem;
+          // background-color: whitesmoke;
+          // padding: 0.5rem;
+
+          img {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+            border-radius: 4rem;
+          }
+        }
+      }
+    }
+
+    .top {
+      h1 {
+        font-size: 3rem;
+        color: seagreen;
+        transition: all ease 0.7s;
+      }
+
+      h2 {
+        color: #2d2e32;
+        font-size: 1.9rem;
+        transition: all ease 0.7s;
+      }
+    }
+  }
+}
+
+#dark .contact {
+  background-color: #0D0D0D;
+  transition: all ease 0.7s;
+  transition: all ease 0.7s;
+
+  .container {
+    // border: 1px solid red;
+
+    .bottom {
+      // border: 1px solid red;
+
+      .subbottom {
+        // border: 1px solid red;
+        background-color: #000000;
+        transition: all ease 0.7s;
+
+        &:hover {
+          background-color: #171717;
+          transition: all ease 0.7s;
+          .hoverspan::before {
+            content: "A-1888, Phase-2, Gulshan-e-Hadeed";
+            position: absolute;
+            height: 2rem;
+            width: 20rem;
+            top: -2.3rem;
+            background-color: seagreen;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 0.2rem;
+            font-weight: 600;
+            color: white;
+            transition: all ease 0.7s;
+          }
+        }
+
+        .right {
+          // border: 1px solid red;
+          display: flex;
+          flex-direction: column;
+          // align-items: center;
+
+          span:first-child {
+            color: whitesmoke;
+            transition: all ease 0.7s;
+          }
+
+          span:last-child {
+            color: #cacaca;
+            transition: all ease 0.7s;
+
+            &:hover {
+              &.spanlast {
+                background-color: #dcdcdc;
+                color: rgb(40, 40, 40);
+                transition: all ease 0.7s;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .top {
+      h1 {
+        font-size: 3rem;
+        color: seagreen;
+        transition: all ease 0.7s;
+      }
+
+      h2 {
+        color: whitesmoke;
+        font-size: 1.9rem;
+        transition: all ease 0.7s;
+      }
+    }
+  }
+}
+
+@media (max-width: 1370px) {
+  .contact {
+    padding: 8rem 6rem;
+    background-color: white;
+    transition: all ease 0.7s;
+    transition: all ease 0.7s;
+    // border: 1px solid red;
+
+    .container {
+      // border: 1px solid red;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      .bottom {
+        // border: 1px solid red;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+
+        .subbottom {
+          // border: 1px solid red;
+          width: 31%;
+          display: flex;
+          // gap: 1.1rem;
+          align-items: center;
+          background-color: #fafafa;
+          position: relative;
+          cursor: pointer;
+          border-radius: 0.4rem;
+          padding: 0.4rem 0.2rem;
+          transition: all ease 0.7s;
+
+          .a {
+            text-decoration: none;
+            // border: 1px solid red;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            color: #171717;
+            transition: all ease 0.7s;
+
+            &:visited {
+              color: #171717;
+              transition: all ease 0.7s;
+            }
+          }
+
+          &:hover {
+            background-color: #f1f1f1;
+            transition: all ease 0.7s;
+            .hoverspan::before {
+              content: "A-1888, Phase-2, Gulshan-e-Hadeed";
+              position: absolute;
+              height: 2rem;
+              width: 20rem;
+              top: -2.3rem;
+              background-color: seagreen;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-radius: 0.2rem;
+              font-weight: 600;
+              color: white;
+              transition: all ease 0.7s;
+            }
+          }
+
+          .right {
+            // border: 1px solid red;
+            display: flex;
+            flex-direction: column;
+            // align-items: center;
+
+            span:first-child {
+              font-weight: 600;
+              font-size: 1.3rem;
+            }
+
+            span:last-child {
+              color: #5a5a5a;
+              font-weight: 500;
+              font-size: 1rem;
+              transition: all ease 0.7s;
+
+              &:hover {
+                &.spanlast {
+                  background-color: #dcdcdc;
+                  padding: 0.15rem;
+                  border-radius: 0.1rem;
+                  color: rgb(40, 40, 40);
+                  font-weight: 600;
+                  transition: all ease 0.7s;
+                }
+              }
+            }
+            .a {
+              text-decoration: none;
+            }
+          }
+
+          .left {
+            // border: 1px solid red;
+            height: 4.1rem;
+            width: 4.1rem;
+            border-radius: 4rem;
+            // background-color: whitesmoke;
+            // padding: 0.5rem;
+
+            img {
+              height: 100%;
+              width: 100%;
+              object-fit: contain;
+              border-radius: 4rem;
+            }
+          }
+        }
+      }
+
+      .top {
+        h1 {
+          font-size: 3rem;
+          color: seagreen;
+          transition: all ease 0.7s;
+        }
+
+        h2 {
+          color: #2d2e32;
+          font-size: 1.9rem;
+          transition: all ease 0.7s;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1230px) {
+  .contact {
+    padding: 8rem 4rem;
+    // border: 1px solid red;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contact {
+    padding: 7rem 3rem;
+    //   border: 1px solid red;
+
+    .container {
+      // border: 1px solid red;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      .bottom {
+        // border: 1px solid red;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.9rem;
+        width: 100%;
+
+        .subbottom {
+          // border: 1px solid red;
+          width: 31%;
+          display: flex;
+          gap: 0rem;
+          align-items: center;
+          background-color: #fafafa;
+          position: relative;
+          cursor: pointer;
+          border-radius: 0.4rem;
+          padding: 0.3rem 0.5rem;
+
+          .a {
+            text-decoration: none;
+            // border: 1px solid red;
+            display: flex;
+            align-items: center;
+            // gap: -1rem;
+            width: 100%;
+            color: #171717;
+
+            &:visited {
+              color: #171717;
+            }
+          }
+
+          &:hover {
+            background-color: #f1f1f1;
+            .hoverspan::before {
+              content: "A-1888, Phase-2, Gulshan-e-Hadeed";
+              position: absolute;
+              height: 2rem;
+              width: 20rem;
+              top: -2.3rem;
+              background-color: seagreen;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-radius: 0.2rem;
+              font-weight: 600;
+              color: white;
+            }
+          }
+
+          .right {
+            // border: 1px solid red;
+            display: flex;
+            flex-direction: column;
+            // align-items: center;
+
+            span:first-child {
+              font-weight: 600;
+              font-size: 1.3rem;
+            }
+
+            span:last-child {
+              color: #5a5a5a;
+              font-weight: 500;
+              font-size: 1rem;
+              width: 100%;
+              // border: 1px solid red;
+              word-break: break-all;
+
+              &:hover {
+                &.spanlast {
+                  background-color: #dcdcdc;
+                  padding: 0.15rem;
+                  border-radius: 0.1rem;
+                  color: rgb(40, 40, 40);
+                  font-weight: 600;
+                }
+              }
+            }
+            .a {
+              text-decoration: none;
+            }
+          }
+
+          .left {
+            // border: 1px solid red;
+            height: 4.1rem;
+            width: 4.1rem;
+            border-radius: 4rem;
+            // background-color: whitesmoke;
+            // padding: 0.5rem;
+
+            img {
+              height: 100%;
+              width: 100%;
+              object-fit: contain;
+              border-radius: 4rem;
+            }
+          }
+        }
+      }
+
+      .top {
+        h1 {
+          font-size: 3rem;
+          color: seagreen;
+        }
+
+        h2 {
+          color: #2d2e32;
+          font-size: 1.9rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 456px) {
+  .contact {
+    // border: 1px solid red;
+    width: 100%;
+    padding: 5rem 0.5rem;
+
+    .container {
+      //   border: 1px solid red;
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+
+      .bottom {
+        // border: 1px solid red;
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+
+        .subbottom {
+          //   border: 1px solid red;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          // gap: 1.5rem;
+          align-items: center;
+          background-color: #fafafa;
+          position: relative;
+          cursor: pointer;
+          border-radius: 0.4rem;
+          padding: 0.3rem 0.2rem;
+
+          .a {
+            text-decoration: none;
+            // border: 1px solid red;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+
+            gap: 2rem;
+          }
+
+          &:hover {
+            background-color: #f1f1f1;
+            .hoverspan::before {
+              content: "A-1888, Phase-2, Gulshan-e-Hadeed";
+              position: absolute;
+              height: 2rem;
+              width: 20rem;
+              top: -2.3rem;
+              left: 0;
+              background-color: seagreen;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              border-radius: 0.2rem;
+              font-weight: 600;
+              color: white;
+            }
+          }
+
+          .right {
+            // border: 1px solid red;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            span:first-child {
+              font-weight: 600;
+              font-size: 1.3rem;
+            }
+
+            span:last-child {
+              color: #5a5a5a;
+              font-weight: 500;
+              font-size: 1rem;
+
+              &:hover {
+                &.spanlast {
+                  background-color: #dcdcdc;
+                  padding: 0.15rem;
+                  border-radius: 0.1rem;
+                  color: rgb(40, 40, 40);
+                  font-weight: 600;
+                }
+              }
+            }
+          }
+
+          .left {
+            // border: 1px solid red;
+            height: 4.5rem;
+            width: 4.5rem;
+            border-radius: 4rem;
+            background-color: whitesmoke;
+            padding: 0.3rem;
+            box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px,
+              rgba(0, 0, 0, 0.1) 0px 2px 4px 0px,
+              rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+
+            img {
+              height: 100%;
+              width: 100%;
+              object-fit: contain;
+              border-radius: 4rem;
+            }
+          }
+        }
+      }
+
+      .top {
+        h1 {
+          font-size: 3rem;
+          color: seagreen;
+        }
+
+        h2 {
+          color: #2d2e32;
+          font-size: 1.9rem;
+        }
+      }
+    }
+  }
+}

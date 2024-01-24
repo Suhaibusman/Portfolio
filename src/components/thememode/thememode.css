@@ -1,0 +1,24 @@
+.themetogglebtn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 4.9rem;
+    border: 2.5px solid rgb(210, 212, 211);
+    border-radius: 4rem;
+    position: relative;
+    padding: 0.2rem;
+}
+
+.ball{
+    width: 1.7rem;
+    height: 1.7rem;
+    border-radius: 2rem;
+    background-color: rgb(19, 185, 91);
+    position: absolute;
+    cursor: pointer;
+}
+
+.ball:hover{
+    transition: all ease 0.7s;
+}
+

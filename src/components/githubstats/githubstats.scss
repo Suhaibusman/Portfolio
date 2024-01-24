@@ -1,0 +1,270 @@
+.githubstats {
+  background: #f0f8ff;
+  color: black;
+  padding: 4rem 13rem;
+  background-color: #f0f8ff;
+  transition: all ease 0.7s;
+  transition: all ease 0.7s;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    .top {
+      h1 {
+        font-size: 3rem;
+        color: seagreen;
+        transition: all ease 0.7s;
+      }
+
+      h2 {
+        color: #2d2e32;
+        font-size: 1.9rem;
+        transition: all ease 0.7s;
+      }
+    }
+
+    .bottom {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .spanError {
+        background-color: #fb3838;
+        padding: 0.1rem;
+        border-radius: 0.4rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+        // margin-top:   2rem;
+      }
+    }
+  }
+  .lessmore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4.5rem;
+    position: relative;
+    margin-top: 2rem;
+
+    // .less {
+    //   background-color: rgba(245, 245, 245, 0.26);
+    //   backdrop-filter: blur(10px);
+    //   padding:0.4rem;
+    //   border-radius: 0.3rem;
+    // }
+    // .more{
+    //   background-color: rgba(46, 139, 86, 0.27);
+    //   backdrop-filter: blur(10px);
+    //   padding:0.4rem;
+    //   border-radius: 0.3rem;
+    // }
+
+    .boxes {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      .box1 {
+        position: absolute;
+        top: -0.61rem;
+        left: -4rem;
+        width: 1.3rem;
+        height: 1.3rem;
+        background: #dfdfdf;
+        // border: 1px solid #2e7d32;
+        z-index: 1;
+        border-radius: 0.3rem;
+        // transition: all ease 0.7s;
+      }
+      .box2 {
+        position: absolute;
+        top: -0.61rem;
+        left: -1.8rem;
+        width: 1.3rem;
+        height: 1.3rem;
+        background: #9be9a8;
+        // border: 1px solid #2e7d32;
+        z-index: 1;
+        border-radius: 0.3rem;
+        // transition: all ease 0.7s;
+      }
+      .box3 {
+        position: absolute;
+        top: -0.61rem;
+        left: 0.4rem;
+        width: 1.3rem;
+        height: 1.3rem;
+        background: #40c463;
+        // border: 1px solid #2e7d32;
+        z-index: 1;
+        border-radius: 0.3rem;
+        // transition: all ease 0.7s;
+      }
+      .box4 {
+        position: absolute;
+        top: -0.61rem;
+        left: 2.6rem;
+        width: 1.3rem;
+        height: 1.3rem;
+        background: #216e39;
+        // border: 1px solid #2e7d32;
+        z-index: 1;
+        border-radius: 0.3rem;
+        // transition: all ease 0.7s;
+      }
+    }
+  }
+}
+
+#dark .githubstats {
+  background: #000;
+  color: white;
+
+  .top {
+    h1 {
+      font-size: 3rem;
+      color: seagreen;
+      transition: all ease 0.7s;
+    }
+
+    h2 {
+      color: whitesmoke;
+      font-size: 1.9rem;
+      transition: all ease 0.7s;
+    }
+  }
+}
+
+@media (max-width: 1370px) {
+  .githubstats {
+    padding: 8rem 6rem;
+  }
+}
+
+@media (max-width: 1230px) {
+  .githubstats {
+    padding: 8rem 4rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .githubstats {
+    padding: 7rem 3rem;
+  }
+}
+
+@media (max-width: 456px) {
+  .githubstats {
+    width: 100%;
+    padding: 5rem 0.5rem;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+
+      .bottom {
+        padding: 0 1rem;
+        margin: 0 auto;
+
+        .spanError {
+          font-size: 1.5rem;
+          font-weight: 400;
+          font-size: 1rem;
+          padding: 0.3rem;
+        }
+      }
+
+      .top {
+        h1 {
+          font-size: 3rem;
+          color: seagreen;
+        }
+
+        h2 {
+          color: #2d2e32;
+          font-size: 1.9rem;
+        }
+      }
+    }
+    .lessmore {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 4.5rem;
+      position: relative;
+      margin-top: 2rem;
+
+      // .less {
+      //   background-color: rgba(245, 245, 245, 0.26);
+      //   backdrop-filter: blur(10px);
+      //   padding:0.4rem;
+      //   border-radius: 0.3rem;
+      // }
+      // .more{
+      //   background-color: rgba(46, 139, 86, 0.27);
+      //   backdrop-filter: blur(10px);
+      //   padding:0.4rem;
+      //   border-radius: 0.3rem;
+      // }
+
+      .boxes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        .box1 {
+          position: absolute;
+          top: -0.61rem;
+          left: -4rem;
+          width: 1.1rem;
+          height: 1.1rem;
+          background: #ebedf0;
+          // border: 1px solid #2e7d32;
+          z-index: 1;
+          border-radius: 0.1rem;
+          // transition: all ease 0.7s;
+        }
+        .box2 {
+          position: absolute;
+          top: -0.61rem;
+          left: -1.8rem;
+          width: 1.1rem;
+          height: 1.1rem;
+          background: #9be9a8;
+          // border: 1px solid #2e7d32;
+          z-index: 1;
+          border-radius: 0.1rem;
+          // transition: all ease 0.7s;
+        }
+        .box3 {
+          position: absolute;
+          top: -0.61rem;
+          left: 0.4rem;
+          width: 1.1rem;
+          height: 1.1rem;
+          background: #40c463;
+          // border: 1px solid #2e7d32;
+          z-index: 1;
+          border-radius: 0.1rem;
+          // transition: all ease 0.7s;
+        }
+        .box4 {
+          position: absolute;
+          top: -0.61rem;
+          left: 2.6rem;
+          width: 1.1rem;
+          height: 1.1rem;
+          background: #216e39;
+          // border: 1px solid #2e7d32;
+          z-index: 1;
+          border-radius: 0.1rem;
+          // transition: all ease 0.7s;
+        }
+      }
+    }
+  }
+}

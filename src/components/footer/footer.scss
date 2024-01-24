@@ -1,0 +1,346 @@
+footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: aliceblue;
+  align-items: center;
+  transition: all ease 1s;
+  // border: 1px solid red;
+
+  .right {
+    // border: 1px solid rgb(255, 0, 0);
+    background-color: rgb(255, 255, 255);
+    padding: 0.2rem;
+    border-radius: 0.2rem;
+    transition: all ease 1.5s;
+
+    span {
+      font-size: 1.1rem;
+      color: rgb(132, 132, 132);
+      transition: all ease 1.5s;
+    }
+  }
+
+  .left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // border: 1px solid red;
+    gap: 1rem;
+
+    .animate-charcter {
+      text-transform: uppercase;
+      background-image: linear-gradient(
+        -225deg,
+        #231557 0%,
+        #44107a 29%,
+        #ff1361 67%,
+        #fff800 100%
+      );
+      background-size: auto auto;
+      background-clip: border-box;
+      background-size: 200% auto;
+      color: #fff;
+      background-clip: text;
+      text-fill-color: transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: textclip 2s linear infinite;
+      display: inline-block;
+      font-size: 2rem;
+    }
+
+    @keyframes textclip {
+      to {
+        background-position: 200% center;
+      }
+    }
+
+    img {
+      height: 4rem;
+      filter: grayscale(1);
+    }
+
+    span {
+      font-size: 1.1rem;
+      color: rgb(132, 132, 132);
+      transition: all ease 1.5s;
+    }
+  }
+
+  .a {
+    text-decoration: none;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    animation-name: fontWeightAnimation; /* Use the defined keyframes */
+    animation-duration: 1.5s; /* Animation duration */
+    animation-timing-function: ease; /* Animation timing function */
+    animation-iteration-count: infinite;
+
+    @keyframes fontWeightAnimation {
+      0% {
+        font-weight: 600; /* Start with bold font weight */
+        background-color: black;
+        color: white;
+        border-radius: 0.1rem;
+        padding: 0 0.2rem;
+      }
+      50% {
+        font-weight: 600; /* Transition to light font weight halfway through */
+        background-color: white;
+        color: black;
+        border-radius: 0.1rem;
+        padding: 0 0.2rem;
+      }
+      100% {
+        font-weight: 600; /* End with bold font weight */
+        background-color: black;
+        color: white;
+        border-radius: 0.1rem;
+        padding: 0 0.2rem;
+      }
+    }
+
+    &:hover {
+      background-color: rgb(235, 235, 235);
+      padding: 0rem 0.3rem;
+      color: black;
+      border-radius: 0.15rem;
+      animation-play-state: paused;
+    }
+  }
+}
+
+#dark footer {
+  background-color: rgb(0, 0, 0);
+  transition: all ease 1s;
+
+  .right {
+    background-color: rgb(1, 1, 1);
+    padding: 0.2rem;
+    border-radius: 0.2rem;
+    transition: all ease 1.5s;
+    span {
+      color: rgb(168, 168, 168);
+      transition: all ease 1.5s;
+    }
+  }
+
+  .left {
+    img {
+      filter: grayscale(2);
+    }
+
+    span {
+      color: rgb(168, 168, 168);
+      transition: all ease 1.5s;
+    }
+  }
+
+  .a {
+    text-decoration: none;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    animation-name: fontWeightAnimation; /* Use the defined keyframes */
+    animation-duration: 1.5s; /* Animation duration */
+    animation-timing-function: ease; /* Animation timing function */
+    animation-iteration-count: infinite;
+
+    @keyframes fontWeightAnimation {
+      0% {
+        font-weight: 600; /* Start with bold font weight */
+        background-color: black;
+        color: white;
+        border-radius: 0.1rem;
+        padding: 0 0.2rem;
+      }
+      50% {
+        font-weight: 600; /* Transition to light font weight halfway through */
+        background-color: white;
+        color: black;
+        border-radius: 0.1rem;
+        padding: 0 0.2rem;
+      }
+      100% {
+        font-weight: 600; /* End with bold font weight */
+        background-color: black;
+        color: white;
+        border-radius: 0.1rem;
+        padding: 0 0.2rem;
+      }
+    }
+
+    &:hover {
+      background-color: rgb(235, 235, 235);
+      padding: 0rem 0.3rem;
+      color: black;
+      border-radius: 0.15rem;
+      animation-play-state: paused;
+    }
+  }
+}
+
+@media (max-width: 1370px) {
+  footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: aliceblue;
+    align-items: center;
+    transition: all ease 1s;
+    // border: 1px solid red;
+
+    .right {
+      // border: 1px solid rgb(255, 0, 0);
+      background-color: rgb(255, 255, 255);
+      padding: 0.2rem;
+      border-radius: 0.2rem;
+      transition: all ease 1.5s;
+
+      span {
+        font-size: 0.95rem;
+        color: rgb(132, 132, 132);
+        transition: all ease 1.5s;
+      }
+    }
+
+    .left {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // border: 1px solid red;
+      gap: 0.5rem;
+
+      img {
+        height: 3.5rem;
+        filter: grayscale(1);
+      }
+
+      span {
+        font-size: 0.95rem;
+        color: rgb(132, 132, 132);
+        transition: all ease 1.5s;
+      }
+    }
+
+    .a {
+      text-decoration: none;
+      font-weight: 600;
+      color: rgb(255, 255, 255);
+      animation-name: fontWeightAnimation; /* Use the defined keyframes */
+      animation-duration: 1.5s; /* Animation duration */
+      animation-timing-function: ease; /* Animation timing function */
+      animation-iteration-count: infinite;
+
+      @keyframes fontWeightAnimation {
+        0% {
+          font-weight: 600; /* Start with bold font weight */
+          background-color: black;
+          color: white;
+          border-radius: 0.1rem;
+          padding: 0 0.2rem;
+        }
+        50% {
+          font-weight: 600; /* Transition to light font weight halfway through */
+          background-color: white;
+          color: black;
+          border-radius: 0.1rem;
+          padding: 0 0.2rem;
+        }
+        100% {
+          font-weight: 600; /* End with bold font weight */
+          background-color: black;
+          color: white;
+          border-radius: 0.1rem;
+          padding: 0 0.2rem;
+        }
+      }
+
+      &:hover {
+        background-color: rgb(235, 235, 235);
+        padding: 0rem 0.3rem;
+        color: black;
+        border-radius: 0.15rem;
+        animation-play-state: paused;
+      }
+    }
+  }
+}
+
+@media (max-width: 456px) {
+  footer {
+    display: flex;
+    gap: 0.1rem;
+    flex-direction: column-reverse;
+    background-color: aliceblue;
+    align-items: center;
+
+    .right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      background-color: rgb(248, 252, 255);
+      padding: 0.2rem;
+      border-radius: 0.2rem;
+      span {
+        font-size: 1.1rem;
+        color: rgb(132, 132, 132);
+        // line-height: 2rem;
+      }
+    }
+
+    .left {
+      display: flex;
+      // justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      // border: 1px solid red;
+      gap: 0.1rem;
+
+      img {
+        height: 2rem;
+        filter: grayscale(1);
+      }
+
+      span {
+        font-size: 1.2rem;
+        color: rgb(132, 132, 132);
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: aliceblue;
+    align-items: center;
+    // border: 1px solid red;
+
+    .right {
+      span {
+        font-size: 0.8rem;
+        color: rgb(132, 132, 132);
+      }
+    }
+
+    .left {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // border: 1px solid red;
+      gap: 1rem;
+
+      img {
+        height: 3rem;
+        filter: grayscale(1);
+      }
+
+      span {
+        font-size: 0.8rem;
+        color: rgb(132, 132, 132);
+      }
+    }
+  }
+}

@@ -1,0 +1,721 @@
+.navbar {
+  // border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3rem;
+  // box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: rgb(248, 252, 255);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  transition: all ease 0.7s;
+
+  &.active {
+    background-color: white;
+
+    color: black;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    transition: all ease 0.7s;
+  }
+
+  .forkandmenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+    border: 2px solid rgb(30, 30, 30);
+    border-radius: 3rem;
+    padding: 0 0.8rem 0 0;
+    background-color: #f8fcff;
+
+    .resumebutton {
+      border: none;
+      background-color: transparent;
+      color: rgb(0, 0, 0);
+      padding: 0.5rem;
+      border-radius: 3rem;
+      font-weight: 600;
+      letter-spacing: 0.002rem;
+      font-size: 1rem;
+
+      cursor: pointer;
+      &:hover {
+        background: radial-gradient(
+          circle at -1% 57.5%,
+          rgba(0, 0, 0, 0.063) 100%,
+          rgba(0, 0, 0, 0.065) 100%
+        );
+
+        cursor: pointer;
+
+        transition: all ease 0.5s;
+
+        &::before {
+          content: "Download";
+        }
+      }
+    }
+
+    .link {
+      text-decoration: none;
+      color: black;
+    }
+
+    .fork {
+      border: 1px solid gray;
+      border-radius: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      padding: 0 0.4rem;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+
+      span {
+        font-size: 1.3rem;
+        font-weight: 600;
+      }
+
+      .gitforkimg {
+        width: 2.5rem;
+        height: 2.5rem;
+        object-fit: contain;
+      }
+    }
+  }
+  .responsivemenuu {
+    border: 1px solid rgb(162, 162, 162);
+    position: absolute;
+    right: 0.31rem;
+    top: 5.5rem;
+    padding: 0.5rem 1rem;
+    width: 12rem;
+    border-radius: 0.2rem;
+    background-color: white;
+    transition: all ease 0.7s;
+
+    hr {
+      width: 6.5rem;
+      height: 0.1rem;
+      background-color: gray;
+      transition: all ease 0.7s;
+    }
+  }
+
+  .right {
+    .navitems {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column;
+      list-style: none;
+      gap: 0.5rem;
+
+      .link {
+        text-decoration: none;
+        color: black;
+      }
+
+      .fork {
+        border: 1px solid gray;
+        border-radius: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        padding: 0 0.4rem;
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        span {
+          font-size: 1.3rem;
+          font-weight: 600;
+        }
+
+        .gitforkimg {
+          width: 2.5rem;
+          height: 2.5rem;
+          object-fit: contain;
+        }
+      }
+
+      .navitem {
+        font-weight: 500;
+        font-size: 1.2rem;
+        border: 1px solid rgb(0, 0, 0);
+        padding: 0.2rem 0.5rem;
+        border-radius: 0.3rem;
+        width: 87%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        &:hover {
+          hr {
+            width: 10rem;
+          }
+        }
+
+        &:hover {
+          background-color: seagreen;
+          color: white;
+          transition: all ease 0.7s;
+        }
+      }
+      .toggle {
+        border: none;
+
+        &:hover {
+          background-color: rgb(255, 255, 255);
+          // background-color: none;
+          color: white;
+          transition: all ease 0.7s;
+          // width: 60%;
+          border-radius: 10rem;
+        }
+      }
+    }
+  }
+
+  .responsivemenu {
+    .menu {
+      height: 2rem;
+      cursor: pointer;
+    }
+  }
+
+  .left {
+    // border: 1px solid red;
+
+    .animate-charcter {
+      text-transform: uppercase;
+      background-image: linear-gradient(
+        -225deg,
+        #231557 0%,
+        #44107a 29%,
+        #ff1361 67%,
+        #fff800 100%
+      );
+      background-size: auto auto;
+      background-clip: border-box;
+      background-size: 200% auto;
+      color: #fff;
+      background-clip: text;
+      text-fill-color: transparent;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: textclip 2s linear infinite;
+      display: inline-block;
+      font-size: 2rem;
+    }
+
+    @keyframes textclip {
+      to {
+        background-position: 200% center;
+      }
+    }
+
+    img {
+      height: 5rem;
+      object-fit: cover;
+    }
+  }
+
+  .afp {
+    padding: 0.5rem 1rem 0.5rem 3rem;
+    border-radius: 3rem;
+    border: 2px solid grey;
+    display: flex;
+    // justify-content: space-between;
+    gap: 2rem;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(232, 232, 232, 0.563);
+    }
+
+    span {
+      font-weight: 600;
+      color: black;
+    }
+
+    .dot {
+      position: absolute;
+      top: 0.5rem;
+      left: 0.4rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+      background: radial-gradient(
+        circle at -1% 57.5%,
+        rgb(19, 170, 82) 0%,
+        rgb(0, 102, 43) 90%
+      );
+      -webkit-animation: slide-in-fwd-center 0.8s
+        cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite alternate-reverse both;
+      animation: slide-in-fwd-center 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+        infinite alternate-reverse both;
+
+      @-webkit-keyframes slide-in-fwd-center {
+        0% {
+          -webkit-transform: translateZ(-1400px);
+          transform: translateZ(-1400px);
+          opacity: 0;
+        }
+        100% {
+          -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+          opacity: 1;
+        }
+      }
+      @keyframes slide-in-fwd-center {
+        0% {
+          -webkit-transform: translateZ(-1400px);
+          transform: translateZ(-1400px);
+          opacity: 0;
+        }
+        100% {
+          -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+#dark .navbar {
+  background-color: rgb(0, 0, 0);
+  transition: all ease 0.7s;
+
+  &.active {
+    background-color: rgb(0, 0, 0);
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 7px 29px 0px;
+    color: rgb(255, 255, 255);
+    transition: all ease 0.7s;
+  }
+
+  .forkandmenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // gap: 1rem;
+    border: 2px solid #808080;
+
+    background-color: #030303;
+
+    .resumebutton {
+      border: none;
+      background: radial-gradient(
+        circle at -1% 57.5%,
+        rgba(218, 218, 218, 0.263) 100%,
+        rgba(221, 221, 221, 0.265) 100%
+      );
+      color: rgb(255, 255, 255);
+      // padding: 0.5rem;
+      // border-radius: 3rem;
+      // font-weight: 600;
+      // letter-spacing: 0.002rem;
+      // font-size: 1rem;
+
+      cursor: pointer;
+      &:hover {
+        background: radial-gradient(
+          circle at -1% 57.5%,
+          rgba(255, 255, 255, 0.213) 100%,
+          rgba(255, 255, 255, 0.215) 100%
+        );
+
+        cursor: pointer;
+
+        transition: all ease 0.5s;
+
+        &::before {
+          content: "Download";
+        }
+      }
+    }
+
+    .link {
+      text-decoration: none;
+      color: white;
+    }
+
+    .fork {
+      border: 2px solid #808080;
+      border-radius: 2rem;
+
+      &:hover {
+        background-color: #171717;
+      }
+
+      span {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: white;
+      }
+
+      .gitforkimg {
+        width: 2.5rem;
+        height: 2.5rem;
+        object-fit: contain;
+        filter: brightness(0) invert(1) sepia(0) saturate(5) hue-rotate(320deg);
+      }
+    }
+  }
+
+  .responsivemenuu {
+    border: 1px solid rgb(162, 162, 162);
+    background-color: rgb(0, 0, 0);
+    color: white;
+    transition: all ease 0.7s;
+
+    hr {
+      background-color: rgb(219, 219, 219);
+      transition: all ease 0.7s;
+    }
+  }
+
+  .right {
+    .navitems {
+      .link {
+        text-decoration: none;
+        color: white;
+      }
+
+      .fork {
+        border: 2px solid #808080;
+        border-radius: 2rem;
+
+        &:hover {
+          background-color: #171717;
+        }
+
+        span {
+          color: white;
+        }
+
+        .gitforkimg {
+          filter: brightness(0) invert(1) sepia(0) saturate(5)
+            hue-rotate(320deg);
+        }
+      }
+
+      .navitem {
+        // border: 1px solid rgb(187, 187, 187);
+        width: 100%;
+        border: 1px solid white;
+      }
+      .toggle {
+        border: none;
+
+        &:hover {
+          // background-color: rgb(22, 22, 22);
+          background-color: black;
+          color: white;
+          transition: all ease 0.7s;
+          // width: 60%;
+          border-radius: 10rem;
+        }
+      }
+    }
+  }
+
+  .responsivemenu {
+    // border: 1px solid red;
+    .menu {
+      background-color: white;
+      padding: 0.15rem;
+      border-radius: 10rem;
+      transition: all ease 0.7s;
+    }
+  }
+
+  .afp {
+    &:hover {
+      background-color: rgba(41, 41, 41, 0.563);
+    }
+    span {
+      color: white;
+    }
+  }
+}
+
+// 13 INCHES MONITOR
+
+@media (max-width: 1025px) {
+  .navbar {
+    // border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    // box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: rgb(248, 252, 255);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+
+    &.active {
+      background-color: white;
+
+      color: black;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+
+    .responsivemenuu {
+      border: 1px solid rgb(162, 162, 162);
+      //  border: 1px solid red;
+      position: absolute;
+      right: 1rem;
+      top: 5.5rem;
+      padding: 0.5rem 1rem;
+      width: 90%;
+      border-radius: 0.2rem;
+      background-color: white;
+      // border: 1px solid red;
+      height: 3.8rem;
+    }
+
+    .right {
+      //  border: 1px solid red;
+      width: 100%;
+      .navitems {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+        list-style: none;
+        gap: 0.5rem;
+        // border: 1px solid red;
+        width: 100%;
+
+        .navitem {
+          // border: 1px solid red;
+          font-weight: 500;
+          font-size: 0.88rem;
+          // border: 1px solid red;
+          padding: 0.2rem 0.4rem;
+          border-radius: 0.3rem;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 2.6rem;
+          cursor: pointer;
+
+          &:hover {
+            hr {
+              width: 10rem;
+            }
+          }
+
+          &:hover {
+            background-color: seagreen;
+            color: white;
+          }
+        }
+      }
+    }
+
+    .responsivemenu {
+      .menu {
+        height: 2rem;
+        cursor: pointer;
+      }
+    }
+
+    .left {
+      // border: 1px solid red;
+
+      img {
+        height: 5rem;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+// MOBILE RESPONSIVENESS
+
+@media (max-width: 456px) {
+  .navbar {
+    // border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    // box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: rgb(248, 252, 255);
+    position: sticky;
+    top: 0;
+    width: 100%;
+
+    &.active {
+      background-color: white;
+
+      color: black;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+
+    .forkandmenu {
+      display: flex;
+      gap: 1rem;
+      border: 2px solid rgb(30, 30, 30);
+      border-radius: 3rem;
+      padding: 0 0.8rem 0 0;
+      background-color: #f8fcff;
+
+      .resumebutton {
+        border: none;
+        background: radial-gradient(
+          circle at -1% 57.5%,
+          rgba(0, 0, 0, 0.063) 100%,
+          rgba(0, 0, 0, 0.065) 100%
+        );
+        color: rgb(0, 0, 0);
+        padding: 0.6rem;
+        border-radius: 3rem;
+        font-weight: 600;
+        letter-spacing: 0.002rem;
+        font-size: 0.9rem;
+
+        cursor: pointer;
+        &:hover {
+          background: radial-gradient(
+            circle at -1% 57.5%,
+            rgba(0, 0, 0, 0.063) 100%,
+            rgba(0, 0, 0, 0.065) 100%
+          );
+
+          cursor: pointer;
+
+          transition: all ease 0.5s;
+
+          &::before {
+            content: "Download";
+          }
+        }
+      }
+      .link {
+        display: none;
+      }
+    }
+
+    .responsivemenuu {
+      // border: 1px solid red;
+      position: absolute;
+      right: 0;
+      top: -5.5rem;
+      width: 100%;
+      height: 110vh;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: -1;
+      transform: translateY(3rem);
+      transition: all ease 0.7s;
+    }
+
+    .right {
+      .navitems {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        list-style: none;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        .link {
+          text-decoration: none;
+        }
+
+        .fork {
+          border: 1px solid gray;
+          border-radius: 2rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          height: 100%;
+          width: 100%;
+          padding: 0 0.4rem;
+
+          &:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+          }
+
+          span {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: black;
+          }
+
+          .gitforkimg {
+            width: 2.5rem;
+            height: 2.5rem;
+            object-fit: contain;
+          }
+        }
+
+        .navitem {
+          font-weight: 500;
+          font-size: 1.2rem;
+        }
+
+        .toggle {
+          border: none;
+          &:hover {
+            // background-color: rgb(22, 22, 22);
+            background-color: white;
+            color: white;
+            transition: all ease 0.7s;
+            // width: 60%;
+            border-radius: 10rem;
+          }
+        }
+      }
+    }
+
+    .responsivemenu {
+      // border: 1px solid red;
+      z-index: 1;
+    }
+
+    .left {
+      // border: 1px solid red;
+      z-index: -1;
+
+      img {
+        height: 4rem;
+        object-fit: cover;
+
+        // border: 1px solid red;
+      }
+    }
+    .afp {
+      display: none;
+
+      span {
+        font-weight: 600;
+        color: black;
+      }
+
+      .dot {
+      }
+    }
+  }
+}
