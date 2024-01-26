@@ -11,13 +11,27 @@ import project9 from "../../Images/ontheway.gif";
 export const projectdata = [
   {
     id: 1,
-    projectpicture: project1,
+    projectpicture: sadapay,
     projectname: "Sadapay Clone 🤑",
     projectdesc:
       "This is sadapay clone! I have make this using Flutter and Dart. I have learn many things while cloning this. This only containes the frontend part only. 😄",
     projectlanguage1: "Flutter",
     projectlanguage2: "Dart",
     code: "https://github.com/Suhaibusman/Sadapay-Clone",
+    live: "",
+    rowreverse: false,
+    livedemo: false,
+    hover: true,
+  },
+  {
+    id: 2,
+    projectpicture: doctorappointmentapp,
+    projectname: "Doctor Appointment App 🏥",
+    projectdesc:
+      "This is Doctor Appointment App! I have make this using Flutter and Dart. I have learn many things while cloning this. This only containes the frontend part only. 😄",
+    projectlanguage1: "Flutter",
+    projectlanguage2: "Dart",
+    code: "https://github.com/Suhaibusman/Doctor-App-Flutter",
     live: "",
     rowreverse: false,
     livedemo: false,
