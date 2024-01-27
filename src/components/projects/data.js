@@ -1,6 +1,6 @@
 import project1 from "../../assets/sadapay.mp4";
 import project2 from "../../assets/doctorappointmentapp.mp4";
-import project3 from "../../Images/cryptoo.png";
+import project3 from "../../assets/geminiai.mp4";
 import project4 from "../../Images/funnyexcusee.png";
 import project5 from "../../Images/teenziapparal.png";
 import project6 from "../../Images/country.png";
@@ -28,10 +28,24 @@ export const projectdata = [
     projectpicture: project2,
     projectname: "Doctor Appointment App 🏥",
     projectdesc:
-      "This is Doctor Appointment App! I have make this using Flutter and Dart. I have learn many things while cloning this. This only containes the frontend part only. 😄",
+      "This is Doctor Appointment App! I have make this using Flutter and Dart.",
     projectlanguage1: "Flutter",
     projectlanguage2: "Dart",
     code: "https://github.com/Suhaibusman/Doctor-App-Flutter",
+    live: "",
+    rowreverse: false,
+    livedemo: false,
+    hover: true,
+  },
+  {
+    id: 3,
+    projectpicture: project3,
+    projectname: "Gemini Ai",
+    projectdesc:
+      "This is Gemini Ai App! I have make this using Flutter and Dart.",
+    projectlanguage1: "Flutter",
+    projectlanguage2: "Dart",
+    code: "https://github.com/Suhaibusman/GeminiAi-Flutter-",
     live: "",
     rowreverse: false,
     livedemo: false,
