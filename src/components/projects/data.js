@@ -56,7 +56,7 @@ export const projectdata = [
     projectpicture: project4,
     projectname: "Netflix Clone 🎥",
     projectdesc:
-      "This is sadapay clone! I have make this using Flutter and Dart. I have learn many things while cloning this. This only containes the frontend part only. 😄",
+      "This is Netflix clone! I have make this using Flutter and Dart. I have learn many things while cloning this. This only containes the frontend part only. 😄",
     projectlanguage1: "Flutter",
     projectlanguage2: "Dart",
     code: "https://github.com/Suhaibusman/Netflix-Clone",
