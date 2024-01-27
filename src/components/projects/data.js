@@ -1,5 +1,5 @@
-import project1 from "../../assets/project1.mp4";
-import project2 from "../../Images/fiverrproject.png";
+import project1 from "../../assets/sadapay.mp4";
+import project2 from "../../assets/doctorappointmentapp.mp4";
 import project3 from "../../Images/cryptoo.png";
 import project4 from "../../Images/funnyexcusee.png";
 import project5 from "../../Images/teenziapparal.png";
@@ -11,7 +11,7 @@ import project9 from "../../Images/ontheway.gif";
 export const projectdata = [
   {
     id: 1,
-    projectpicture: sadapay,
+    projectpicture: project1,
     projectname: "Sadapay Clone 🤑",
     projectdesc:
       "This is sadapay clone! I have make this using Flutter and Dart. I have learn many things while cloning this. This only containes the frontend part only. 😄",
@@ -25,7 +25,7 @@ export const projectdata = [
   },
   {
     id: 2,
-    projectpicture: doctorappointmentapp,
+    projectpicture: project2,
     projectname: "Doctor Appointment App 🏥",
     projectdesc:
       "This is Doctor Appointment App! I have make this using Flutter and Dart. I have learn many things while cloning this. This only containes the frontend part only. 😄",
