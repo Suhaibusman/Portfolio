@@ -2,7 +2,7 @@ import project1 from "../../assets/sadapay.mp4";
 import project2 from "../../assets/doctorappointmentapp.mp4";
 import project3 from "../../assets/geminiai.mp4";
 import project4 from "../../assets/netflixclone.mp4";
-import project5 from "../../Images/teenziapparal.png";
+import project5 from "../../assets/chatgpt.mp4";
 import project6 from "../../Images/country.png";
 import project7 from "../../Images/figmatoreact.png";
 import project8 from "../../Images/fooddel.png";
@@ -65,5 +65,18 @@ export const projectdata = [
     livedemo: false,
     hover: true,
   },
- 
+  {
+    id: 5,
+    projectpicture: project5,
+    projectname: "Chat Gpt App 💬",
+    projectdesc:
+      "This is ChatGpt App! I have make this using Flutter and Dart.",
+    projectlanguage1: "Flutter",
+    projectlanguage2: "Dart",
+    code: "https://github.com/Suhaibusman/Chat-Gpt-Flutter-",
+    live: "",
+    rowreverse: false,
+    livedemo: false,
+    hover: true,
+  },
 ];
