@@ -1,3 +1,5 @@
+
+
 .projects {
   background-color: aliceblue;
   padding: 5rem 13rem;
@@ -111,7 +113,7 @@
 
         .leftbb {
           width: 500px; /* adjust the width as needed */
-          height: 350px; /* adjust the height as needed */
+          height: auto; /* adjust the height as needed */
           overflow-y: hidden;
           border-radius: 1rem;
           box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
@@ -124,11 +126,12 @@
         }
 
         .leftb {
-          width: 500px; /* adjust the width as needed */
-          height: 350px; /* adjust the height as needed */
+          width: auto; /* adjust the width as needed */
+          height: auto; /* adjust the height as needed */
+          padding: 60px;
           overflow-y: hidden;
           //   border: 1px solid red;
-          border-radius: 1rem;
+          // border-radius: 1rem;
           box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
           position: relative;
           transition: all ease 0.7s;
@@ -248,6 +251,9 @@
     }
   }
 }
+
+
+
 
 #dark .projects {
   background-color: rgb(0, 0, 0);
@@ -448,7 +454,7 @@
 
           .leftb {
             width: 500px; /* adjust the width as needed */
-            height: 350px; /* adjust the height as needed */
+            height: auto; /* adjust the height as needed */
             overflow-y: hidden;
             //   border: 1px solid red;
             border-radius: 1rem;
@@ -688,7 +694,7 @@
 
           .leftb {
             width: 400px; /* adjust the width as needed */
-            height: 250px; /* adjust the height as needed */
+            height: auto; /* adjust the height as needed */
             overflow-y: hidden;
             //   border: 1px solid red;
             border-radius: 1rem;
@@ -907,7 +913,7 @@
 
           .leftbb {
             width: 320px; /* adjust the width as needed */
-            height: 210px; /* adjust the height as needed */
+            height: auto; /* adjust the height as needed */
             overflow-y: hidden;
             // border: 1px solid red;
             border-radius: 0.5rem;
@@ -922,7 +928,7 @@
 
           .leftb {
             width: 320px; /* adjust the width as needed */
-            height: 210px; /* adjust the height as needed */
+            height: auto; /* adjust the height as needed */
             overflow-y: hidden;
             // border: 1px solid red;
             border-radius: 0.5rem;
@@ -1109,7 +1115,7 @@
 
           .leftbb {
             width: 320px; /* adjust the width as needed */
-            height: 210px; /* adjust the height as needed */
+            height: auto; /* adjust the height as needed */
             overflow-y: hidden;
             // border: 1px solid red;
             border-radius: 0.5rem;
@@ -1123,7 +1129,7 @@
 
           .leftb {
             width: 320px; /* adjust the width as needed */
-            height: 210px; /* adjust the height as needed */
+            height: auto; /* adjust the height as needed */
             overflow-y: hidden;
             // border: 1px solid red;
             border-radius: 0.5rem;

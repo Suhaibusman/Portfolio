@@ -3,6 +3,7 @@ import "./projects.scss";
 import github from "../../Images/github.png";
 import live from "../../Images/live.png";
 import { projectdata } from "./data";
+import Mobile from "../mobile/Mobile";
 
 const Projects = () => {
   const [touch, setTouch] = useState(false);
@@ -43,14 +44,16 @@ const Projects = () => {
                 }
               >
                 <div className={item.hover ? "leftb" : "leftbb"}>
-                  <video
-                    src={item.projectpicture}
-                    alt="projectpicture"
-                    loading="lazy"
-                    autoPlay
-                    loop
-                    controls 
-                  />
+                  <Mobile>
+                    <video
+                      src={item.projectpicture}
+                      alt="projectpicture"
+                      loading="lazy"
+                      autoPlay
+                      loop
+                      controls={false}
+                    />
+                  </Mobile>
 
                   {item.hover ? (
                     <div className="overlay">
