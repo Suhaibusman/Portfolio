@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./LoginModal.css";
 import { useAuth } from "../../context/AuthContext";
-import { Lock, User, KeyRound, X, ShieldCheck, AlertCircle, Sparkles } from "lucide-react";
+import { Lock, User, KeyRound, X, ShieldCheck, AlertCircle } from "lucide-react";
 
 const LoginModal = ({ isOpen, onClose, onSuccess }) => {
   const { login } = useAuth();
@@ -35,12 +35,6 @@ const LoginModal = ({ isOpen, onClose, onSuccess }) => {
     }, 400);
   };
 
-  const handleQuickDemoFill = () => {
-    setUsername("admin");
-    setPassword("suhaib123");
-    setError("");
-  };
-
   return (
     <div className="login-modal-overlay" onClick={onClose}>
       <div className="login-modal-card glass-card" onClick={(e) => e.stopPropagation()}>
@@ -60,20 +54,6 @@ const LoginModal = ({ isOpen, onClose, onSuccess }) => {
           </button>
         </div>
 
-        {/* Demo Hint Banner */}
-        <div className="demo-credentials-banner">
-          <div className="demo-badge">
-            <Sparkles size={14} />
-            <span>Quick Access</span>
-          </div>
-          <p className="demo-text">
-            Test Credentials: <code>admin</code> / <code>suhaib123</code>
-          </p>
-          <button type="button" onClick={handleQuickDemoFill} className="btn-autofill">
-            Auto Fill
-          </button>
-        </div>
-
         {/* Error Alert */}
         {error && (
           <div className="login-error-alert">
@@ -83,7 +63,7 @@ const LoginModal = ({ isOpen, onClose, onSuccess }) => {
         )}
 
         {/* Form */}
-        <form onSubmit={handleSubmit} className="login-form">
+        <form onSubmit={handleSubmit} className="login-form" autoComplete="off">
           <div className="form-group">
             <label htmlFor="login-username">Username</label>
             <div className="input-with-icon">
@@ -93,7 +73,8 @@ const LoginModal = ({ isOpen, onClose, onSuccess }) => {
                 type="text"
                 value={username}
                 onChange={(e) => setUsername(e.target.value)}
-                placeholder="e.g. admin or suhaib"
+                placeholder="Enter username"
+                autoComplete="off"
                 autoFocus
                 required
               />
@@ -110,6 +91,7 @@ const LoginModal = ({ isOpen, onClose, onSuccess }) => {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder="Enter password"
+                autoComplete="new-password"
                 required
               />
             </div>

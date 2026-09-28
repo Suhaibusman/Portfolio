@@ -9,6 +9,7 @@ import {
   Check,
   ExternalLink,
   MessageSquare,
+  Sparkles,
 } from "lucide-react";
 import { GithubIcon, LinkedinIcon, WhatsAppIcon } from "../common/BrandIcons";
 import confetti from "canvas-confetti";
@@ -19,6 +20,7 @@ const Contact = () => {
     email: "",
     message: "",
   });
+  const [sendChannel, setSendChannel] = useState("whatsapp"); // "whatsapp" | "email"
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [copiedEmail, setCopiedEmail] = useState(false);
   const [copiedPhone, setCopiedPhone] = useState(false);
@@ -43,11 +45,26 @@ const Contact = () => {
       confetti({ particleCount: 70, spread: 70, origin: { y: 0.6 } });
     } catch {}
 
-    const subject = encodeURIComponent(`Portfolio Message from ${formData.name}`);
-    const body = encodeURIComponent(
-      `Hi Suhaib,\n\nName: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}\n\nBest regards,\n${formData.name}`
-    );
-    window.open(`mailto:${PERSONAL_INFO.email}?subject=${subject}&body=${body}`, "_blank");
+    if (sendChannel === "whatsapp") {
+      // Direct WhatsApp alert to Suhaib's number
+      const cleanPhone = "923112136120";
+      const waText = encodeURIComponent(
+        `👋 *New Inquiry from Portfolio*\n\n` +
+        `👤 *Name:* ${formData.name}\n` +
+        `📧 *Email:* ${formData.email}\n\n` +
+        `💬 *Message:*\n${formData.message}\n\n` +
+        `— Sent via Suhaib.dev Portfolio`
+      );
+      window.open(`https://api.whatsapp.com/send?phone=${cleanPhone}&text=${waText}`, "_blank");
+    } else {
+      // Email submission fallback
+      const subject = encodeURIComponent(`Portfolio Message from ${formData.name}`);
+      const body = encodeURIComponent(
+        `Hi Suhaib,\n\nName: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}\n\nBest regards,\n${formData.name}`
+      );
+      window.open(`mailto:${PERSONAL_INFO.email}?subject=${subject}&body=${body}`, "_blank");
+    }
+
     setFormSubmitted(true);
   };
 
@@ -185,8 +202,33 @@ const Contact = () => {
             <div className="contact-form-card glass-card">
               {!formSubmitted ? (
                 <form onSubmit={handleSubmit} className="inquiry-form">
-                  <h3>Send a Direct Message</h3>
-                  <p className="form-subtext">Leave your message and I'll get back to you promptly.</p>
+                  <div className="inquiry-form-header">
+                    <h3>Send a Direct Message</h3>
+                    <p className="form-subtext">Direct alert sends straight to my WhatsApp or Email.</p>
+                  </div>
+
+                  {/* Channel Toggle (WhatsApp vs Email) */}
+                  <div className="channel-selector-row">
+                    <span className="channel-select-label">Send Alert To:</span>
+                    <div className="channel-pill-group">
+                      <button
+                        type="button"
+                        onClick={() => setSendChannel("whatsapp")}
+                        className={`channel-pill-btn ${sendChannel === "whatsapp" ? "active-whatsapp" : ""}`}
+                      >
+                        <WhatsAppIcon size={16} />
+                        <span>WhatsApp (Instant)</span>
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => setSendChannel("email")}
+                        className={`channel-pill-btn ${sendChannel === "email" ? "active-email" : ""}`}
+                      >
+                        <Mail size={16} />
+                        <span>Email</span>
+                      </button>
+                    </div>
+                  </div>
 
                   <div className="form-group">
                     <label className="form-label" htmlFor="user-name">Your Name *</label>
@@ -209,7 +251,7 @@ const Contact = () => {
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      placeholder="Enter your email"
+                      placeholder="Enter your email address"
                       className="form-text-input"
                     />
                   </div>
@@ -222,20 +264,36 @@ const Contact = () => {
                       required
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      placeholder="Write your message here..."
+                      placeholder="Write your project details or message here..."
                       className="form-textarea"
                     />
                   </div>
 
-                  <button type="submit" className="btn-primary w-full">
-                    <Send size={18} />
-                    <span>Send Message</span>
-                  </button>
+                  {sendChannel === "whatsapp" ? (
+                    <button type="submit" className="btn-primary w-full btn-submit-whatsapp">
+                      <WhatsAppIcon size={18} />
+                      <span>Send Direct via WhatsApp</span>
+                    </button>
+                  ) : (
+                    <button type="submit" className="btn-primary w-full">
+                      <Send size={18} />
+                      <span>Send via Email</span>
+                    </button>
+                  )}
                 </form>
               ) : (
                 <div className="form-success-state">
+                  <div className="success-icon-box">
+                    <Check size={28} className="text-emerald" />
+                  </div>
                   <h3>Thank You, {formData.name}!</h3>
-                  <p>Your message has been drafted to <strong>{PERSONAL_INFO.email}</strong>.</p>
+                  <p>
+                    {sendChannel === "whatsapp" ? (
+                      <>Your message was routed directly to Suhaib's <strong>WhatsApp ({PERSONAL_INFO.phoneDisplay})</strong>.</>
+                    ) : (
+                      <>Your message was drafted directly to <strong>{PERSONAL_INFO.email}</strong>.</>
+                    )}
+                  </p>
                   <button
                     onClick={() => {
                       setFormSubmitted(false);

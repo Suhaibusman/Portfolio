@@ -138,55 +138,40 @@ const Projects = () => {
           </p>
         </div>
 
-        {/* Admin Bar (When Logged In) or Quick Login Trigger */}
-        <div className="projects-admin-toolbar glass-card">
-          <div className="admin-status-left">
-            {isAuthenticated ? (
+        {/* Admin Bar (Visible Only When Logged In) */}
+        {isAuthenticated && (
+          <div className="projects-admin-toolbar glass-card">
+            <div className="admin-status-left">
               <div className="admin-badge-active">
                 <ShieldCheck size={16} className="text-cyan" />
                 <span>
                   Admin Mode: <strong>{user?.name || "Suhaib"}</strong>
                 </span>
               </div>
-            ) : (
-              <div className="guest-admin-hint">
-                <span>Looking to manage or upload projects?</span>
-                <button
-                  type="button"
-                  onClick={() => setIsLoginModalOpen(true)}
-                  className="btn-text-link"
-                >
-                  Admin Login
-                </button>
-              </div>
-            )}
-          </div>
+            </div>
 
-          <div className="admin-actions-right">
-            {isAuthenticated && (
-              <>
-                <button
-                  type="button"
-                  onClick={handleResetDefaults}
-                  className="btn-toolbar-ghost"
-                  title="Reset to default seed projects"
-                >
-                  <RotateCcw size={14} />
-                  <span>Reset Defaults</span>
-                </button>
+            <div className="admin-actions-right">
+              <button
+                type="button"
+                onClick={handleResetDefaults}
+                className="btn-toolbar-ghost"
+                title="Reset to default seed projects"
+              >
+                <RotateCcw size={14} />
+                <span>Reset Defaults</span>
+              </button>
 
-                <button
-                  type="button"
-                  onClick={handleOpenCreateModal}
-                  className="btn-primary btn-add-project"
-                >
-                  <Plus size={16} />
-                  <span>Add New Project</span>
-                </button>
-              </>
-            )}
+              <button
+                type="button"
+                onClick={handleOpenCreateModal}
+                className="btn-primary btn-add-project"
+              >
+                <Plus size={16} />
+                <span>Add New Project</span>
+              </button>
+            </div>
           </div>
-        </div>
+        )}
 
         {/* Filter Tabs & Search Bar */}
         <div className="projects-controls-bar">

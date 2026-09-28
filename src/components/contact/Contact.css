@@ -154,6 +154,17 @@
   padding: 2.5rem 1rem;
 }
 
+.success-icon-box {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .form-success-state h3 {
   font-size: 1.4rem;
   color: var(--text-primary);
@@ -164,8 +175,75 @@
   font-size: 0.9rem;
 }
 
+/* Channel Selector (WhatsApp vs Email) */
+.channel-selector-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.channel-select-label {
+  font-size: 0.775rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  letter-spacing: 0.04em;
+}
+
+.channel-pill-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.channel-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.5rem 0.95rem;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.channel-pill-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-primary);
+}
+
+.channel-pill-btn.active-whatsapp {
+  background: rgba(37, 211, 102, 0.15);
+  border-color: #25d366;
+  color: #25d366;
+  box-shadow: 0 0 15px -3px rgba(37, 211, 102, 0.3);
+}
+
+.channel-pill-btn.active-email {
+  background: rgba(99, 102, 241, 0.15);
+  border-color: var(--accent-indigo);
+  color: #a5b4fc;
+  box-shadow: 0 0 15px -3px rgba(99, 102, 241, 0.3);
+}
+
+.btn-submit-whatsapp {
+  background: linear-gradient(135deg, #25d366 0%, #128c7e 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.35) !important;
+}
+
+.btn-submit-whatsapp:hover {
+  filter: brightness(1.08);
+  transform: translateY(-2px);
+}
+
 @media (max-width: 992px) {
   .contact-layout-grid {
     grid-template-columns: 1fr;
   }
 }
+
