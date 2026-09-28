@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 
+// Context Providers
+import { AuthProvider } from "./context/AuthContext";
+import { ProjectProvider } from "./context/ProjectContext";
+
 // Components
 import Banner from "./components/banner/Banner";
 import Navbar from "./components/navbar/Navbar";
@@ -28,40 +32,44 @@ const App = () => {
   };
 
   return (
-    <div className={`app-root theme ${theme}`}>
-      {/* Micro-dot ambient mesh grid background */}
-      <div className="ambient-mesh" />
+    <AuthProvider>
+      <ProjectProvider>
+        <div className={`app-root theme ${theme}`}>
+          {/* Micro-dot ambient mesh grid background */}
+          <div className="ambient-mesh" />
 
-      {/* Top Solidarity & Awareness Ticker */}
-      <Banner />
+          {/* Top Solidarity & Awareness Ticker */}
+          <Banner />
 
-      {/* Sticky Glassmorphic Navbar */}
-      <Navbar theme={theme} toggleTheme={toggleTheme} />
+          {/* Sticky Glassmorphic Navbar */}
+          <Navbar theme={theme} toggleTheme={toggleTheme} />
 
-      {/* Main Digital Showcase Content */}
-      <main id="main-content">
-        {/* 1. Hero Section */}
-        <HeroSection />
+          {/* Main Digital Showcase Content */}
+          <main id="main-content">
+            {/* 1. Hero Section */}
+            <HeroSection />
 
-        {/* 2. About Me */}
-        <Aboutme />
+            {/* 2. About Me */}
+            <Aboutme />
 
-        {/* 3. Featured Mobile Applications (Real Video Showcases) */}
-        <Projects />
+            {/* 3. Featured Multi-Platform Applications & Live Showcases */}
+            <Projects />
 
-        {/* 4. Technical Skills */}
-        <TechArsenal />
+            {/* 4. Technical Skills */}
+            <TechArsenal />
 
-        {/* 5. Live GitHub Activity Heatmap */}
-        <GithubStats />
+            {/* 5. Live GitHub Activity Heatmap */}
+            <GithubStats />
 
-        {/* 6. Contact & Direct Inquiry */}
-        <Contact />
-      </main>
+            {/* 6. Contact & Direct Inquiry */}
+            <Contact />
+          </main>
 
-      {/* 7. Cyber Footer */}
-      <Footer />
-    </div>
+          {/* 7. Cyber Footer */}
+          <Footer />
+        </div>
+      </ProjectProvider>
+    </AuthProvider>
   );
 };
 
