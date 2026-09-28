@@ -4,7 +4,7 @@ import "./App.css";
 // Components
 import Banner from "./components/banner/Banner";
 import Navbar from "./components/navbar/Navbar";
-import HeroSection from "./components/herosection/HeroSection";
+import HeroSection from "./components/herosection/Herosection";
 import Aboutme from "./components/aboutme/Aboutme";
 import Projects from "./components/projects/Projects";
 import TechArsenal from "./components/techarsenal/TechArsenal";
