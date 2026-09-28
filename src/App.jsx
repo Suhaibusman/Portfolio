@@ -5,18 +5,14 @@ import "./App.css";
 import Banner from "./components/banner/Banner";
 import Navbar from "./components/navbar/Navbar";
 import HeroSection from "./components/herosection/HeroSection";
-import MetricsBar from "./components/metrics/MetricsBar";
 import Aboutme from "./components/aboutme/Aboutme";
 import Projects from "./components/projects/Projects";
-import AppPlaypen from "./components/playpen/AppPlaypen";
 import TechArsenal from "./components/techarsenal/TechArsenal";
-import Experience from "./components/experience/Experience";
 import GithubStats from "./components/githubstats/GithubStats";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
 
 const App = () => {
-  // Theme state: dark by default (2026 dark-mode-first aesthetic)
   const [theme, setTheme] = useState(() => {
     return localStorage.getItem("app_theme") || "dark";
   });
@@ -47,32 +43,23 @@ const App = () => {
         {/* 1. Hero Section */}
         <HeroSection />
 
-        {/* 2. Metrics & Highlights Bar */}
-        <MetricsBar />
-
-        {/* 3. Architect Profile & Bio */}
+        {/* 2. About Me */}
         <Aboutme />
 
-        {/* 4. Featured Mobile Applications (Core Case Studies) */}
+        {/* 3. Featured Mobile Applications (Real Video Showcases) */}
         <Projects />
 
-        {/* 5. Interactive Mobile App Simulator / Playpen */}
-        <AppPlaypen />
-
-        {/* 6. Technical Arsenal & Architecture Matrix */}
+        {/* 4. Technical Skills */}
         <TechArsenal />
 
-        {/* 7. Experience, Certifications & Testimonials */}
-        <Experience />
-
-        {/* 8. Live GitHub Activity Calendar */}
+        {/* 5. Live GitHub Activity Heatmap */}
         <GithubStats />
 
-        {/* 9. Contact & Work Inquiry Suite + FAQ */}
+        {/* 6. Contact & Direct Inquiry */}
         <Contact />
       </main>
 
-      {/* 10. Cyber Footer */}
+      {/* 7. Cyber Footer */}
       <Footer />
     </div>
   );

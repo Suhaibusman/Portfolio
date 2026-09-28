@@ -29,7 +29,7 @@ const Navbar = ({ theme, toggleTheme }) => {
       }
 
       // Determine active section
-      const sections = ["hero", "projects", "playpen", "skills", "experience", "contact"];
+      const sections = ["hero", "aboutme", "projects", "skills", "github", "contact"];
       const scrollPosition = window.scrollY + 200;
 
       for (const section of sections) {
@@ -51,7 +51,6 @@ const Navbar = ({ theme, toggleTheme }) => {
 
   const handleDownloadCV = (e) => {
     e.preventDefault();
-    // Trigger confetti celebration
     try {
       confetti({
         particleCount: 80,
@@ -66,11 +65,10 @@ const Navbar = ({ theme, toggleTheme }) => {
   };
 
   const navLinks = [
-    { name: "About", href: "#about" },
+    { name: "About", href: "#aboutme" },
     { name: "Projects", href: "#projects" },
-    { name: "Live Sandbox", href: "#playpen" },
-    { name: "Arsenal", href: "#skills" },
-    { name: "Experience", href: "#experience" },
+    { name: "Tech Stack", href: "#skills" },
+    { name: "GitHub Stats", href: "#github" },
     { name: "Contact", href: "#contact" },
   ];
 
@@ -86,7 +84,7 @@ const Navbar = ({ theme, toggleTheme }) => {
             <span className="brand-name">
               Suhaib<span className="brand-dot">.dev</span>
             </span>
-            <span className="brand-role">Flutter Architect</span>
+            <span className="brand-role">Flutter Developer</span>
           </div>
         </a>
 
@@ -108,9 +106,6 @@ const Navbar = ({ theme, toggleTheme }) => {
                   }`}
                 >
                   {link.name}
-                  {link.name === "Live Sandbox" && (
-                    <span className="sandbox-mini-badge">Demo</span>
-                  )}
                 </a>
               </li>
             ))}
@@ -171,9 +166,6 @@ const Navbar = ({ theme, toggleTheme }) => {
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   <span>{link.name}</span>
-                  {link.name === "Live Sandbox" && (
-                    <span className="sandbox-mini-badge">Interactive</span>
-                  )}
                 </a>
               </li>
             ))}

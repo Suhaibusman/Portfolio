@@ -38,11 +38,11 @@ const Footer = () => {
               </span>
             </div>
             <p className="footer-brand-bio">
-              Senior Mobile Application Engineer & Flutter Specialist based in {PERSONAL_INFO.location}. Crafting fluid, 60FPS native-speed experiences for global clients.
+              Flutter Developer based in {PERSONAL_INFO.location}. Crafting fluid, responsive mobile apps and modern web interfaces with clean code.
             </p>
             <div className="footer-live-status">
               <span className="live-beacon" />
-              <span>Available for contract & full-time mobile roles</span>
+              <span>{PERSONAL_INFO.availability}</span>
             </div>
           </div>
 
@@ -50,13 +50,12 @@ const Footer = () => {
           <div className="footer-links-col">
             <h4>Navigation</h4>
             <ul className="footer-links-list">
-              <li><a href="#hero">Overview & Hero</a></li>
-              <li><a href="#about">Architect Profile</a></li>
-              <li><a href="#projects">Mobile Projects (5+)</a></li>
-              <li><a href="#playpen">In-Browser Phone Sandbox</a></li>
-              <li><a href="#skills">Technical Arsenal</a></li>
-              <li><a href="#experience">Track Record & Reviews</a></li>
-              <li><a href="#contact">Contact & Inquiry</a></li>
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#aboutme">About Me</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#skills">Tech Stack</a></li>
+              <li><a href="#github">GitHub Stats</a></li>
+              <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
 

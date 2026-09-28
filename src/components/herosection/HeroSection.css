@@ -1,17 +1,17 @@
 /* ==========================================================================
-   HERO SECTION STYLES (2026 EDITION)
+   HERO SECTION STYLES (AUTHENTIC 2026 EDITION)
    ========================================================================== */
 
 .hero-section {
   position: relative;
-  min-height: calc(100vh - var(--nav-height) - 35px);
+  min-height: calc(100vh - var(--nav-height) - 40px);
   display: flex;
-  align-items: center;
-  padding: clamp(3rem, 6vw, 6rem) 0;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(2.5rem, 5vw, 5rem) 0 2rem;
   overflow: hidden;
 }
 
-/* Ambient Glow Orbs */
 .hero-glow {
   position: absolute;
   width: 500px;
@@ -39,7 +39,7 @@
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   align-items: center;
-  gap: clamp(2.5rem, 5vw, 5rem);
+  gap: clamp(2.5rem, 5vw, 4.5rem);
   position: relative;
   z-index: 1;
 }
@@ -48,7 +48,7 @@
 .hero-content {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.25rem;
 }
 
 .hero-badge-row {
@@ -58,50 +58,40 @@
   gap: 0.75rem;
 }
 
-.hero-specialization-pill {
+.location-pill {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
   font-family: var(--font-mono);
   font-size: 0.8125rem;
   font-weight: 600;
-  color: var(--accent-cyan);
-  background: rgba(6, 182, 212, 0.08);
-  border: 1px solid rgba(6, 182, 212, 0.25);
-  padding: 0.35rem 0.85rem;
+  color: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  padding: 0.35rem 0.75rem;
   border-radius: var(--radius-full);
 }
 
-.text-cyan {
-  color: var(--accent-cyan);
-}
-
-.text-violet {
-  color: var(--accent-violet);
-}
-
-.text-emerald {
-  color: var(--accent-emerald);
-}
-
 .hero-title {
-  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+  font-size: clamp(2.5rem, 4.5vw, 3.8rem);
   font-weight: 800;
   line-height: 1.12;
   letter-spacing: -0.03em;
   color: var(--text-primary);
 }
 
-.hero-description {
-  font-size: clamp(1.05rem, 1.4vw, 1.2rem);
+.hero-designation {
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: 700;
   color: var(--text-secondary);
-  line-height: 1.65;
-  max-width: 620px;
+  margin-top: -0.5rem;
 }
 
-.highlight-text {
-  color: var(--text-primary);
-  font-weight: 600;
+.hero-description {
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  color: var(--text-secondary);
+  line-height: 1.65;
+  max-width: 580px;
 }
 
 /* CTA Group */
@@ -109,16 +99,16 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 1rem;
-  margin-top: 0.5rem;
+  gap: 0.85rem;
+  margin-top: 0.25rem;
 }
 
-/* Social Matrix */
+/* Social Links Matrix */
 .hero-social-matrix {
-  margin-top: 1rem;
+  margin-top: 0.75rem;
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.6rem;
 }
 
 .social-label {
@@ -133,22 +123,21 @@
 .social-links-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.6rem;
+  gap: 0.5rem;
 }
 
 .hero-social-card {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 0.95rem;
+  gap: 0.45rem;
+  padding: 0.45rem 0.85rem;
   background: var(--bg-glass-card);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-md);
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: 600;
   color: var(--text-secondary);
   transition: all var(--transition-fast);
-  text-decoration: none;
 }
 
 .hero-social-card:hover {
@@ -156,355 +145,120 @@
   border-color: var(--border-glow);
   background: var(--bg-glass-hover);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.upwork-card {
-  border-color: rgba(16, 185, 129, 0.3);
+.upwork-card:hover {
+  border-color: rgba(16, 185, 129, 0.5);
+  color: #34d399;
 }
 
-.upwork-badge {
-  font-size: 0.6875rem;
-  font-family: var(--font-mono);
-  background: #10b981;
-  color: #07090e;
-  font-weight: 700;
-  padding: 0.1rem 0.4rem;
-  border-radius: 4px;
-}
-
-.whatsapp-card {
-  border-color: rgba(37, 211, 102, 0.3);
+.whatsapp-card:hover {
+  border-color: rgba(37, 211, 102, 0.5);
   color: #25d366;
 }
 
-/* Right Column: 3D Isometric Phone Showcase */
+/* Right: Portrait */
 .hero-visual-wrapper {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  perspective: 1200px;
 }
 
-.hero-phone-3d-stage {
-  transform: rotateY(-8deg) rotateX(6deg) rotateZ(-2deg);
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+.hero-portrait-frame {
+  position: relative;
+  padding: 1rem;
+  border-radius: var(--radius-xl);
+  max-width: 360px;
+  width: 100%;
+  box-shadow: var(--shadow-lg);
 }
 
-.hero-phone-3d-stage:hover {
-  transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg) scale(1.02);
+.portrait-inner-content {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: #090d16;
 }
 
-/* Orbiting Badges */
-.orbit-pill {
+.hero-avatar-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-avatar-badge {
   position: absolute;
-  z-index: 35;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
   display: flex;
   align-items: center;
-  gap: 0.6rem;
-  padding: 0.6rem 0.95rem;
-  background: var(--bg-glass-hover);
-  border: 1px solid var(--border-medium);
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
   border-radius: var(--radius-md);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
 }
 
-.orbit-pill strong {
+.hero-avatar-badge strong {
   display: block;
-  font-size: 0.8125rem;
-  font-weight: 700;
+  font-size: 0.875rem;
   color: var(--text-primary);
   line-height: 1.1;
 }
 
-.orbit-pill span {
-  font-size: 0.6875rem;
-  color: var(--text-secondary);
+.hero-avatar-badge span {
+  font-size: 0.75rem;
+  color: var(--accent-cyan);
+  font-family: var(--font-mono);
 }
 
-.orbit-pill-1 {
-  top: 15%;
-  left: -20px;
-}
-
-.orbit-pill-2 {
-  bottom: 25%;
-  right: -25px;
-}
-
-.orbit-pill-3 {
-  bottom: 5%;
-  left: -10px;
-}
-
-/* Inside Simulated Phone UI */
-.hero-simulated-screen {
-  padding: 38px 16px 14px 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  background: #090d16;
-  color: #ffffff;
-}
-
-.app-screen-header {
+/* Tech Stack Bar */
+.hero-techstack-bar {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-subtle);
   display: flex;
   align-items: center;
-  justify-content: space-between;
-}
-
-.app-user-info {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.app-user-avatar {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid var(--accent-indigo);
-}
-
-.app-greeting {
-  display: block;
-  font-size: 0.6875rem;
-  color: #94a3b8;
-}
-
-.app-username {
-  font-size: 0.8125rem;
-  color: #ffffff;
-}
-
-.app-status-badge {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  padding: 2px 8px;
-  background: rgba(16, 185, 129, 0.15);
-  border: 1px solid rgba(16, 185, 129, 0.3);
-  border-radius: 999px;
-  font-size: 0.6875rem;
-  font-weight: 600;
-  color: #34d399;
-}
-
-/* Virtual Card */
-.virtual-card-widget {
-  background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4338ca 100%);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 16px;
-  padding: 14px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  flex-wrap: wrap;
+  gap: 1rem;
   position: relative;
-  overflow: hidden;
+  z-index: 2;
 }
 
-.virtual-card-widget::after {
-  content: '';
-  position: absolute;
-  top: -30px;
-  right: -30px;
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.card-top-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 0.75rem;
+.techstack-header span {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
   font-weight: 700;
-  letter-spacing: 0.05em;
-  color: #cbd5e1;
-}
-
-.card-balance-box {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.balance-label {
-  font-size: 0.625rem;
-  color: #94a3b8;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  color: var(--text-tertiary);
+  white-space: nowrap;
 }
 
-.balance-amount-row {
+.techstack-chips-row {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.balance-value {
-  font-size: 1.25rem;
-  font-family: var(--font-display);
-  font-weight: 800;
-  color: #ffffff;
-}
-
-.btn-card-toggle {
-  color: #94a3b8;
-  padding: 4px;
-  border-radius: 4px;
-}
-
-.btn-card-toggle:hover {
-  color: #ffffff;
-}
-
-.card-bottom-row {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.6875rem;
-  color: #94a3b8;
-  font-family: var(--font-mono);
-}
-
-/* Quick Actions in Phone */
-.app-actions-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
-}
-
-.app-action-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  padding: 8px 10px;
-  background: var(--gradient-brand);
-  color: #ffffff;
-  font-size: 0.75rem;
-  font-weight: 600;
-  border-radius: 10px;
-  transition: all 0.2s ease;
-  text-decoration: none;
-}
-
-.app-action-btn:hover {
-  transform: translateY(-1px);
-}
-
-.action-secondary {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #f8fafc;
-}
-
-.btn-transferring {
-  opacity: 0.7;
-  pointer-events: none;
-}
-
-/* Transactions Feed */
-.app-transactions-section {
+  flex-wrap: wrap;
+  gap: 0.5rem;
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  overflow: hidden;
 }
 
-.transactions-header {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.6875rem;
-  color: #94a3b8;
-  font-weight: 600;
-}
-
-.trans-count {
-  color: var(--accent-cyan);
-}
-
-.transactions-list {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.transaction-item {
-  display: flex;
+.tech-chip-item {
+  display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 6px 8px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 8px;
-}
-
-.trans-icon-box {
-  width: 24px;
-  height: 24px;
-  border-radius: 6px;
-  background: rgba(99, 102, 241, 0.2);
-  color: #818cf8;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.trans-info {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.trans-name {
-  font-size: 0.6875rem;
+  gap: 0.45rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--radius-full);
+  font-size: 0.8125rem;
   font-weight: 600;
-  color: #f1f5f9;
+  color: var(--text-primary);
 }
 
-.trans-time {
-  font-size: 0.5625rem;
-  color: #64748b;
+.tech-chip-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
 }
 
-.trans-amount {
-  font-size: 0.6875rem;
-  font-weight: 700;
-  font-family: var(--font-mono);
-}
-
-.trans-amount.income {
-  color: #34d399;
-}
-
-.trans-amount.expense {
-  color: #f87171;
-}
-
-/* Bottom dock inside phone */
-.app-bottom-dock {
-  margin-top: auto;
-  display: flex;
-  justify-content: space-around;
-  padding-top: 4px;
-  color: #475569;
-  font-size: 0.65rem;
-}
-
-.app-bottom-dock .active {
-  color: var(--accent-cyan);
-}
-
-/* Responsive adjustments */
-@media (max-width: 1024px) {
+@media (max-width: 992px) {
   .hero-container {
     grid-template-columns: 1fr;
     text-align: center;
@@ -514,33 +268,21 @@
     align-items: center;
   }
 
-  .hero-badge-row {
+  .hero-badge-row, .hero-cta-group, .social-links-grid {
     justify-content: center;
   }
 
-  .hero-cta-group {
+  .hero-avatar-image {
+    height: 320px;
+  }
+
+  .hero-techstack-bar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .techstack-chips-row {
     justify-content: center;
-  }
-
-  .social-links-grid {
-    justify-content: center;
-  }
-
-  .hero-visual-wrapper {
-    margin-top: 2rem;
-  }
-
-  .hero-phone-3d-stage {
-    transform: none;
-  }
-
-  .orbit-pill-1 {
-    left: 5px;
-  }
-  .orbit-pill-2 {
-    right: 5px;
-  }
-  .orbit-pill-3 {
-    left: 15px;
   }
 }
