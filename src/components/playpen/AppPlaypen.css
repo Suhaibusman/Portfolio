@@ -1,0 +1,873 @@
+/* ==========================================================================
+   INTERACTIVE APP PLAYPEN STYLES (2026 EDITION)
+   ========================================================================== */
+
+.playpen-section {
+  position: relative;
+  z-index: 5;
+}
+
+.playpen-shell {
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-medium);
+  background: var(--bg-glass-card);
+}
+
+/* Top Toolbar */
+.playpen-top-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-subtle);
+  margin-bottom: 2rem;
+}
+
+.app-preset-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.preset-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1.15rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+.preset-tab-btn:hover {
+  color: var(--text-primary);
+  border-color: var(--border-medium);
+  background: var(--bg-glass-hover);
+}
+
+.preset-tab-btn.active {
+  background: var(--gradient-brand);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 4px 15px -3px rgba(99, 102, 241, 0.5);
+}
+
+/* Case Selector */
+.phone-case-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.case-label {
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+}
+
+.case-dots {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.case-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.case-dot.active {
+  transform: scale(1.2);
+  border-color: var(--accent-cyan);
+}
+
+.dot-midnight {
+  background: #18181b;
+}
+
+.dot-titanium {
+  background: #71717a;
+}
+
+.dot-violet {
+  background: #4c1d95;
+}
+
+/* Workspace Grid */
+.playpen-workspace-grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: clamp(2rem, 4vw, 4rem);
+  align-items: center;
+}
+
+.playpen-phone-stage {
+  display: flex;
+  justify-content: center;
+}
+
+.playpen-phone-device {
+  width: 280px;
+  height: 560px;
+  border-radius: 44px;
+}
+
+.phone-theme-midnight {
+  border-color: #18181b;
+}
+
+.phone-theme-titanium {
+  border-color: #52525b;
+}
+
+.phone-theme-violet {
+  border-color: #581c87;
+}
+
+/* Status Bar */
+.simulated-status-bar {
+  position: absolute;
+  top: 8px;
+  left: 18px;
+  right: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: #ffffff;
+  z-index: 25;
+}
+
+.sim-status-icons {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.625rem;
+  font-family: var(--font-mono);
+}
+
+/* Common App Screen */
+.playpen-screen {
+  padding: 38px 14px 14px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #ffffff;
+  overflow-y: auto;
+}
+
+.app-header-mini {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 6px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.avatar-chip {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.6875rem;
+  color: #cbd5e1;
+}
+
+.fintech-logo-text {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.8125rem;
+  color: #38bdf8;
+}
+
+.live-status-pill {
+  font-size: 0.625rem;
+  font-family: var(--font-mono);
+  color: #34d399;
+  background: rgba(16, 185, 129, 0.15);
+  padding: 2px 6px;
+  border-radius: 99px;
+}
+
+/* 3D Flip Card */
+.sandbox-card-3d {
+  width: 100%;
+  height: 125px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.card-side {
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  backface-visibility: hidden;
+  position: absolute;
+  inset: 0;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.card-front {
+  background: linear-gradient(135deg, #09090b 0%, #1e1b4b 60%, #312e81 100%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transform: rotateY(0deg);
+}
+
+.card-back {
+  background: linear-gradient(135deg, #18181b 0%, #27272a 100%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transform: rotateY(180deg);
+}
+
+.sandbox-card-3d.flipped .card-front {
+  transform: rotateY(-180deg);
+}
+
+.sandbox-card-3d.flipped .card-back {
+  transform: rotateY(0deg);
+}
+
+.card-row-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: #94a3b8;
+}
+
+.tap-hint {
+  font-size: 0.5625rem;
+  color: var(--accent-cyan);
+}
+
+.card-balance-display {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-label {
+  font-size: 0.5625rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+}
+
+.card-amount {
+  font-size: 1.15rem;
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.card-row-bottom {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.6875rem;
+  font-family: var(--font-mono);
+  color: #cbd5e1;
+}
+
+.card-magstripe {
+  height: 20px;
+  background: #09090b;
+  margin: -12px -12px 6px -12px;
+}
+
+.card-cvv-box {
+  background: #ffffff;
+  color: #000;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.625rem;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  align-self: flex-end;
+}
+
+.card-disclaimer {
+  font-size: 0.5625rem;
+  color: #a1a1aa;
+}
+
+/* Actions inside phone */
+.fintech-action-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.action-pill-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px;
+  border-radius: 10px;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: #ffffff;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.action-pill-btn:hover {
+  transform: translateY(-1px);
+}
+
+.action-pill-btn.send {
+  background: var(--gradient-brand);
+}
+
+.action-pill-btn.receive {
+  background: rgba(16, 185, 129, 0.2);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  color: #34d399;
+}
+
+/* Ledger Box */
+.fintech-ledger-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  overflow: hidden;
+}
+
+.ledger-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: #94a3b8;
+}
+
+.ledger-filters {
+  display: flex;
+  gap: 4px;
+}
+
+.filter-btn {
+  font-size: 0.6rem;
+  padding: 1px 6px;
+  border-radius: 4px;
+  color: #94a3b8;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.filter-btn.active {
+  background: var(--accent-indigo);
+  color: #ffffff;
+}
+
+.ledger-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  overflow-y: auto;
+}
+
+.ledger-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+.ledger-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  background: rgba(99, 102, 241, 0.15);
+  color: #818cf8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ledger-details {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.tx-title {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: #f1f5f9;
+}
+
+.tx-meta {
+  font-size: 0.5625rem;
+  color: #64748b;
+}
+
+.tx-value {
+  font-size: 0.6875rem;
+  font-family: var(--font-mono);
+  font-weight: 700;
+}
+
+.tx-value.income {
+  color: #34d399;
+}
+.tx-value.expense {
+  color: #f87171;
+}
+
+/* Doctor App */
+.doctor-brand {
+  font-weight: 800;
+  font-size: 0.8125rem;
+  color: #38bdf8;
+}
+
+.search-bar-mock {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  font-size: 0.6875rem;
+  color: #94a3b8;
+}
+
+.doc-section-heading {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: #cbd5e1;
+  margin-bottom: 4px;
+}
+
+.doctor-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.doc-card-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.doc-card-item.selected {
+  border-color: var(--accent-cyan);
+  background: rgba(6, 182, 212, 0.1);
+}
+
+.doc-avatar {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #1e293b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-cyan);
+}
+
+.doc-meta {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.doc-meta strong {
+  font-size: 0.6875rem;
+  color: #ffffff;
+}
+
+.doc-meta span {
+  font-size: 0.5625rem;
+  color: #94a3b8;
+}
+
+.doc-fee {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: #34d399;
+}
+
+.slot-picker-box {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.slot-title {
+  font-size: 0.625rem;
+  font-weight: 600;
+  color: #94a3b8;
+}
+
+.slot-buttons-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px;
+}
+
+.slot-btn {
+  padding: 4px 6px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  font-size: 0.625rem;
+  color: #cbd5e1;
+}
+
+.slot-btn.selected {
+  background: var(--accent-indigo);
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.btn-book-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px;
+  background: var(--gradient-brand);
+  color: #ffffff;
+  border-radius: 8px;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: auto;
+}
+
+.appointment-confirmed-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  padding: 12px 0;
+  margin: auto 0;
+}
+
+.appointment-confirmed-state h3 {
+  font-size: 0.95rem;
+  color: #ffffff;
+}
+
+.appointment-confirmed-state p {
+  font-size: 0.6875rem;
+  color: #94a3b8;
+}
+
+.ticket-pass-box {
+  width: 100%;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 6px 0;
+}
+
+.ticket-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.625rem;
+}
+
+/* Gemini App */
+.gemini-header-tag {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  color: #ffffff;
+}
+
+.gemini-chat-history {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow-y: auto;
+  padding-right: 2px;
+}
+
+.chat-bubble-row {
+  display: flex;
+  width: 100%;
+}
+
+.chat-bubble-row.user {
+  justify-content: flex-end;
+}
+
+.chat-bubble {
+  max-width: 85%;
+  padding: 6px 10px;
+  border-radius: 12px;
+  font-size: 0.6875rem;
+  line-height: 1.4;
+}
+
+.chat-bubble.user {
+  background: var(--gradient-brand);
+  color: #ffffff;
+  border-bottom-right-radius: 2px;
+}
+
+.chat-bubble.bot {
+  background: rgba(255, 255, 255, 0.08);
+  color: #f1f5f9;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom-left-radius: 2px;
+}
+
+.typing-bubble {
+  display: flex;
+  gap: 4px;
+  padding: 8px 12px;
+}
+
+.dot-typing {
+  width: 4px;
+  height: 4px;
+  background: var(--accent-cyan);
+  border-radius: 50%;
+  animation: typing 1s infinite alternate;
+}
+
+.dot-typing:nth-child(2) { animation-delay: 0.2s; }
+.dot-typing:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes typing {
+  from { opacity: 0.3; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1.2); }
+}
+
+.gemini-quick-prompts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.gemini-quick-prompts button {
+  font-size: 0.5625rem;
+  padding: 3px 6px;
+  background: rgba(99, 102, 241, 0.15);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  color: #c7d2fe;
+  border-radius: 4px;
+}
+
+.gemini-input-form {
+  display: flex;
+  gap: 6px;
+  margin-top: auto;
+}
+
+.gemini-text-input {
+  flex: 1;
+  padding: 6px 10px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 0.6875rem;
+  outline: none;
+}
+
+.gemini-send-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: var(--gradient-brand);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Crypto App */
+.crypto-brand {
+  font-weight: 800;
+  font-size: 0.8125rem;
+  color: #f59e0b;
+}
+
+.crypto-portfolio-banner {
+  background: linear-gradient(135deg, #18181b 0%, #27272a 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.banner-sub {
+  font-size: 0.5625rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+}
+
+.banner-val {
+  font-size: 1.15rem;
+  font-family: var(--font-display);
+  font-weight: 800;
+}
+
+.banner-pnl {
+  font-size: 0.625rem;
+  font-family: var(--font-mono);
+}
+
+.crypto-list-box {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.crypto-row-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+.crypto-icon-box {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  background: rgba(245, 158, 11, 0.2);
+  color: #f59e0b;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.crypto-meta {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.crypto-meta strong {
+  font-size: 0.6875rem;
+  color: #ffffff;
+}
+
+.crypto-meta span {
+  font-size: 0.5625rem;
+  color: #94a3b8;
+}
+
+.crypto-price-col {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+}
+
+.crypto-price-col strong {
+  font-size: 0.6875rem;
+  font-family: var(--font-mono);
+}
+
+.crypto-price-col span {
+  font-size: 0.5625rem;
+  font-family: var(--font-mono);
+}
+
+/* Right Column: Blueprint Details */
+.playpen-blueprint-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.blueprint-card {
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.blueprint-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--accent-cyan);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.blueprint-header h3 {
+  font-size: clamp(1.4rem, 2vw, 1.8rem);
+  color: var(--text-primary);
+}
+
+.blueprint-desc {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  font-size: 0.95rem;
+  margin-bottom: 1.25rem;
+}
+
+.blueprint-features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.feature-bullet {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+.blueprint-actions {
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 992px) {
+  .playpen-workspace-grid {
+    grid-template-columns: 1fr;
+  }
+}

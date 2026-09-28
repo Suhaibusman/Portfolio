@@ -1,0 +1,90 @@
+/* ==========================================================================
+   BANNER TICKER STYLES
+   ========================================================================== */
+
+.top-ticker-banner {
+  background: linear-gradient(90deg, #07090e 0%, #111827 50%, #07090e 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.8125rem;
+  padding: 0.4rem 0;
+  color: var(--text-secondary);
+  position: relative;
+  z-index: 101;
+  overflow: hidden;
+}
+
+[data-theme="light"] .top-ticker-banner, .theme.light .top-ticker-banner {
+  background: linear-gradient(90deg, #f1f5f9 0%, #e2e8f0 50%, #f1f5f9 100%);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  color: var(--text-secondary);
+}
+
+.banner-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  text-align: center;
+}
+
+.banner-flag-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.banner-flag {
+  width: 22px;
+  height: 14px;
+  object-fit: cover;
+  border-radius: 2px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+}
+
+.banner-text-content {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.banner-label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #34d399;
+  font-weight: 700;
+  background: rgba(16, 185, 129, 0.12);
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.banner-divider {
+  color: var(--text-tertiary);
+}
+
+.banner-phrase {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.banner-heart-wrapper {
+  display: flex;
+  align-items: center;
+  color: #f43f5e;
+}
+
+@media (max-width: 640px) {
+  .banner-label {
+    display: none;
+  }
+  .banner-divider {
+    display: none;
+  }
+  .banner-phrase {
+    font-size: 0.75rem;
+  }
+}

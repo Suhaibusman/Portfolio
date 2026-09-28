@@ -1,68 +1,88 @@
-import React, { useState } from "react";
+import React from "react";
 import GitHubCalendar from "react-github-calendar";
-import "./githubstats.scss";
+import "./GithubStats.css";
+import { PERSONAL_INFO } from "../../data/portfolioData";
+import { GitBranch, Star, GitPullRequest, Code2, ExternalLink, Sparkles } from "lucide-react";
 
 const GithubStats = () => {
-  const [contributions, setContributions] = useState(true);
-
-  const selectYearContributions = (contributions) => {
-    const targetYear = 2023;
-
-    return contributions.filter((activity) => {
-      const date = new Date(activity.date);
-      const year = date.getFullYear();
-
-      return year === targetYear;
-    });
-  };
-
   return (
-    <div className="githubstats">
+    <section id="github" className="github-section section-spacing">
       <div className="container">
-        <div className="top">
-          <h1>GitHub Stats</h1>
-          <h2>
-            {/* GitHub Stats: Where I flex my coding prowess, Gen Z style 💻📊 */}
-            Unveiling My GitHub Stats! 🔥💻
+        {/* Section Header */}
+        <div className="section-header">
+          <div className="section-tag">
+            <GitBranch size={14} />
+            <span>Open Source & Activity</span>
+          </div>
+          <h2 className="section-title">
+            Real-Time <span className="gradient-text">GitHub Contribution</span> Flow
           </h2>
+          <p className="section-subtitle">
+            Consistent open-source contributions, clean commits, and modular repository engineering.
+          </p>
         </div>
 
-        <div className="bottom">
-          {contributions ? (
+        {/* GitHub Glass Container */}
+        <div className="github-stats-card glass-card">
+          <div className="github-card-header">
+            <div className="github-user-badge">
+              <span className="github-icon-box">
+                <Code2 size={18} />
+              </span>
+              <div>
+                <strong>@Suhaibusman</strong>
+                <span>Continuous Mobile Engineering</span>
+              </div>
+            </div>
+
+            <a
+              href={PERSONAL_INFO.githubUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="btn-outline-glow"
+            >
+              <span>Explore All Repos</span>
+              <ExternalLink size={14} />
+            </a>
+          </div>
+
+          {/* Calendar Heatmap Container */}
+          <div className="github-calendar-wrapper">
             <GitHubCalendar
-              fontSize={14}
-              blockMargin={7}
-              blockRadius={3}
-              blockSize={20}
-              colorScheme="light"
               username="Suhaibusman"
-              transformData={selectYearContributions}
-              showWeekdayLabels={true}
-              hideColorLegend
+              fontSize={13}
+              blockSize={14}
+              blockMargin={5}
+              blockRadius={3}
+              colorScheme="dark"
+              theme={{
+                dark: ["#0d121f", "#1e1b4b", "#4338ca", "#6366f1", "#06b6d4"],
+                light: ["#f1f5f9", "#c7d2fe", "#818cf8", "#6366f1", "#06b6d4"],
+              }}
               labels={{
-                totalCount: "{{count}} contributions in the year 2023",
+                totalCount: "{{count}} contributions recorded in recent year",
               }}
             />
-          ) : (
-            <span className="spanError">
-              Sorry, there was an error loading the stats. Please try again
-              later. 😔
-            </span>
-          )}
-        </div>
-      </div>
-      <div className="lessmore">
-        <span className="less">Less</span>
-        <div className="boxes">
-          <span className="box1" />
-          <span className="box2" />
-          <span className="box3" />
-          <span className="box4" />
-        </div>
+          </div>
 
-        <span className="more">More</span>
+          {/* Quick Metrics Matrix */}
+          <div className="github-quick-chips">
+            <div className="gh-chip">
+              <GitPullRequest size={15} className="text-cyan" />
+              <span>Clean Pull Requests & Git Flows</span>
+            </div>
+            <div className="gh-chip">
+              <Star size={15} className="text-amber" />
+              <span>Public Repositories & Starred Packages</span>
+            </div>
+            <div className="gh-chip">
+              <Sparkles size={15} className="text-violet" />
+              <span>100% Documented Architectures</span>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

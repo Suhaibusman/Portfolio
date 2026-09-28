@@ -1,15 +1,20 @@
-#light {
-  background-color: rgb(255, 255, 255);
-  transition: all ease 2s;
+/* ==========================================================================
+   APP LEVEL STYLES
+   ========================================================================== */
+
+.app-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  position: relative;
 }
 
-#dark {
-  background: radial-gradient(
-    circle at 24.1% 68.8%,
-    rgb(50, 50, 50) 0%,
-    rgb(0, 0, 0) 99.4%
-  );
-  
-
-  transition: all ease 2s;
+#main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
 }

@@ -1,0 +1,83 @@
+/* ==========================================================================
+   GITHUB STATS STYLES (2026 EDITION)
+   ========================================================================== */
+
+.github-section {
+  position: relative;
+  z-index: 5;
+}
+
+.github-stats-card {
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  border-radius: var(--radius-xl);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.github-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.github-user-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.github-icon-box {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: rgba(99, 102, 241, 0.15);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  color: #818cf8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.github-user-badge strong {
+  display: block;
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+.github-user-badge span {
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+}
+
+.github-calendar-wrapper {
+  overflow-x: auto;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.github-quick-chips {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.gh-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.85rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+}
